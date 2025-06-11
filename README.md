@@ -68,3 +68,48 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Prerequisites
+Java 17+
+
+Maven
+
+PostgreSQL (or use H2 for testing)
+===================================
+git clone https://github.com/your-username/student-marks-system.git
+cd student-marks-system
+
+Configure application.properties:
+==================================
+spring.datasource.url=jdbc:postgresql://localhost:5432/marksdb
+spring.datasource.username=youruser
+spring.datasource.password=yourpass
+spring.jpa.hibernate.ddl-auto=update
+Run the application:
+
+
+./mvnw spring-boot:run
+Access Swagger UI (if enabled):
+
+http://localhost:8080/swagger-ui.html
+✅ Future Enhancements
+JWT-based login and token management
+
+Email notifications for parents/students
+
+PDF report generation per student
+
+Frontend (React) integration
+
+📂 Folder Structure (Backend)
+arduino
+Copy
+Edit
+src/
+├── controller/
+├── service/
+├── repository/
+├── entity/
+├── config/
+└── dto/
